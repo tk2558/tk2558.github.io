@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     langCircles.forEach(circle => { 
         circle.addEventListener("click", () => {
             PLtextElement.textContent = circle.dataset.lang;
-            PLimgElement.src = circle.getElementsByTagName("img")[0].getAttribute("src");;
+            PLimgElement.src = circle.getElementsByTagName("img")[0].getAttribute("src");
         });
     }); 
 
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
     FECircles.forEach(circle => { 
         circle.addEventListener("click", () => {
             FEtextElement.textContent = circle.dataset.lang;
-            FEimgElement.src = circle.getElementsByTagName("img")[0].getAttribute("src");;
+            FEimgElement.src = circle.getElementsByTagName("img")[0].getAttribute("src");
         });
     }); 
 
@@ -68,7 +68,35 @@ document.addEventListener("DOMContentLoaded", () => {
     BECircles.forEach(circle => { 
         circle.addEventListener("click", () => {
             BEtextElement.textContent = circle.dataset.lang;
-            BEimgElement.src = circle.getElementsByTagName("img")[0].getAttribute("src");;
+            BEimgElement.src = circle.getElementsByTagName("img")[0].getAttribute("src");
         });
     }); 
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    function startOrbiting(selector, radius, speed) {
+        const circles = document.querySelectorAll(selector);
+        const totalCircles = circles.length;
+        let angle = 0;
+
+        function animate() {
+            angle += speed * 0.01; // rotation speed
+            circles.forEach((circle, index) => {
+                const step = (2 * Math.PI) / totalCircles;
+                const currentAngle = angle + index * step;
+
+                const x = Math.cos(currentAngle) * radius;
+                const y = Math.sin(currentAngle) * radius;
+
+                circle.style.left = `calc(50% + ${x}px)`;
+                circle.style.top = `calc(50% + ${y}px)`;
+            });
+            requestAnimationFrame(animate);
+        }
+        animate();
+    }
+
+    startOrbiting(".lang-circle", 240, .75); // (selector, radius, speed)
+    startOrbiting(".FE-circle", 240, .8);
+    startOrbiting(".BE-circle", 240, .75);
 });
