@@ -175,10 +175,9 @@ nav ul li a {
 .profile-details {
   display: flex;
   flex-direction: column;
-  flex: 1;
+  max-height: 17.5em;
   font-size: 1em;
-  max-height: 17.4375em;
-  gap: 1.875em; 
+  gap: 1.875em;
 }
 
 .profile-details h2 {
@@ -186,14 +185,14 @@ nav ul li a {
   align-items: center;
   font-size: 1.5em;
   margin-top: .3125em;
-  flex-basis: auto; 
+  flex-grow: 1;
 }
 
 .profile-details p {
   display: flex;
   align-items: center;
   font-size: 1em;
-  flex-basis: auto; 
+  flex-grow: 1;
 }
 
 /* Social Buttons */
@@ -267,8 +266,8 @@ nav ul li a {
   display: flex;
   flex-direction: column;
   position: relative;
-  max-width: 54em;
-  min-height: 27.8125em;
+  width: 54em;
+  height: 27.8125em;
   margin-left: .75em;
   background: #F3F3F3;
   border-radius: 10px;
