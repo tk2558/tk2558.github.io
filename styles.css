@@ -110,7 +110,7 @@ nav ul li a {
   flex-direction: row;
   align-items: flex-start;
   gap: 20px; /* Adjust spacing between profile and description */
-  width: 85vw;
+  min-width: 85vw;
   margin-left: 165px;
   margin-top: 75px;
   margin-bottom: 50px;
@@ -122,10 +122,10 @@ nav ul li a {
   flex-direction: column;
   gap: 10px;
   min-height: 445px;
-  width: 35vw;
+  min-width: 672px;
+  max-width: 35vw;
   padding: 20px;
   border-radius: 10px;
-  margin-top: 2px;
   border: 2px dashed #DAA06D;
   background-color: #EADDCA;
   box-shadow: 0 0 0 4px #EADDCA, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
@@ -174,6 +174,7 @@ nav ul li a {
 .profile-details {
   flex: 1;
   font-size: 16px;
+  max-height: 297px;
 }
 
 .profile-details h2 {
@@ -211,9 +212,10 @@ nav ul li a {
   padding: 10px 16px;
   border-radius: 6px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.15s ease-in-out;
+  transition: all 0.2s ease-in-out;
   border: none;
   cursor: pointer;
+  flex-basis: auto;
 }
 
 .github-btn {
@@ -229,6 +231,7 @@ nav ul li a {
   font-weight: bold;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.2s ease-in-out;
+  flex-basis: auto;
 }
 
 .google-btn {
@@ -244,6 +247,7 @@ nav ul li a {
   font-weight: bold;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.2s ease-in-out;
+  flex-basis: auto;
 }
 
 .linkedin-btn:hover, .github-btn:hover, .google-btn:hover {
@@ -259,13 +263,14 @@ nav ul li a {
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 45vw;
-  height: 451px;
+  min-width: 865px;
+  max-width: 45vw;
+  min-height: 445px;
   margin-left: 12px;
   background: #F3F3F3;
-  border-style: solid;
-  border-color: #474747;
   border-radius: 10px;
+  border: 1px solid #474747;
+  box-shadow: 0 0 0 4px #474747,2px 2px 4px 2px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 16px;
@@ -275,7 +280,8 @@ nav ul li a {
 
 .description-switch-mode {
   background: #29292c;
-  border-color: #F3F3F3;
+  border: 1px solid #F3F3F3;
+  box-shadow: 0 0 0 4px #F3F3F3, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
 }
 
 .description:before {
@@ -567,7 +573,7 @@ nav ul li a {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  width: 50vw;
+  width: 1000px;
   margin-right: auto;
   margin-left: auto;
   border-radius: 5px;
@@ -628,7 +634,7 @@ nav ul li a {
 }
 
 .terminal-container {
-  width: 360px;
+  min-width: 360px;
   height: 240px;
 }
 
