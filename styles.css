@@ -173,9 +173,12 @@ nav ul li a {
 }
 
 .profile-details {
+  display: flex;
+  flex-direction: column;
   flex: 1;
   font-size: 1em;
   max-height: 17.4375em;
+  gap: 1.875em; 
 }
 
 .profile-details h2 {
@@ -183,14 +186,12 @@ nav ul li a {
   align-items: center;
   font-size: 1.5em;
   margin-top: .3125em; 
-  margin-bottom: 1.875rem; 
 }
 
 .profile-details p {
   display: flex;
   align-items: center;
   font-size: 1em;
-  margin-bottom: 1.875em; 
 }
 
 /* Social Buttons */
@@ -308,7 +309,7 @@ nav ul li a {
 
 .descript-title {
   color: var(--color);
-  padding: .75rem 1.5rem .5rem 1.5rem;
+  padding: .5em 0 .25em .75em;
   font-weight: 500;
   font-size: 2rem;
   transition: transform 300ms ease;
@@ -325,6 +326,7 @@ nav ul li a {
   transition: transform 300ms ease;
   z-index: 5;
   font-size: 1.2em;
+  margin-bottom: .25em;
 }
 
 .description:hover .descript-body {
