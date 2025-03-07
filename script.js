@@ -16,6 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const FECircles = document.querySelectorAll(".FE-circle");
     const BECircles = document.querySelectorAll(".BE-circle");
 
+    const folderWires = document.querySelectorAll(".folderWires");
+    const multiFolderContainer = document.getElementById("multiFolder-container");
+
+    const train = document.getElementById("train-container");
+
     themeToggle.addEventListener("click", () => {
         iconSun.classList.toggle("active");
         iconMoon.classList.toggle("active");
@@ -31,6 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
         langCircles.forEach(circle => { circle.classList.toggle("lang-circle-switch-mode"); }); 
         FECircles.forEach(circle => { circle.classList.toggle("FE-circle-switch-mode"); });
         BECircles.forEach(circle => { circle.classList.toggle("BE-circle-switch-mode"); });
+ 
+        folderWires.forEach(wire => { wire.classList.toggle("folderWires-switch-mode"); });
+        multiFolderContainer.classList.toggle("multiFolder-container-switch-mode");
+        train.classList.toggle("train-container-switch-mode");
     });
 });
 
@@ -99,4 +108,35 @@ document.addEventListener("DOMContentLoaded", () => {
     startOrbiting(".lang-circle", 240, .75); // (selector, radius, speed)
     startOrbiting(".FE-circle", 240, .8);
     startOrbiting(".BE-circle", 240, .75);
+});
+
+// Random Folder Button
+document.addEventListener("DOMContentLoaded", () => {
+    function getRandomElement(array) {
+        const randomIndex = Math.floor(Math.random() * array.length);
+        return array[randomIndex];
+    }
+
+    const folder = document.getElementById("folder3");
+    const randomFolder = document.getElementById("randomFolder");
+    folder.addEventListener("click", () => {
+        const githubLinks = [
+            "https://github.com/tk2558/OpenWeatherAPI-Web-Application",
+            "https://github.com/tk2558/Discord-Game-Bot",
+            "https://github.com/tk2558/Franka-Emika-Panda-Robot-Simulation",
+            "https://github.com/tk2558/Java-Tic-Tac-Toe-",
+            "https://github.com/tk2558/Airline-Website-Database-Project",
+            "https://github.com/tk2558/QuickDraw-Paste",
+            "https://github.com/tk2558/Sudoku_Fast_React",
+            "https://github.com/tk2558/Sudoku_Python",
+            "https://github.com/tk2558/Balloono-Single-Player",
+            "https://github.com/tk2558/Sudoku-Generator-and-Solver",
+            "https://github.com/tk2558/Python-Snake-Game",
+            "https://github.com/tk2558/Coin-Detection/tree/main",
+            "https://github.com/tk2558/Fish-Tracking/tree/main",
+            "https://github.com/tk2558/tk2558.github.io/tree/main"
+        ]
+        const link = getRandomElement(githubLinks);
+        randomFolder.setAttribute("href", link);
+    });
 });

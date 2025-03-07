@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WIP Website</title>
+    <title>Tk2558 Website</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
 </head>
@@ -47,7 +47,7 @@
                         <p><img src="assets/education.png" class="profile-icon"> New York University Tandon School of Engineering (2020 - 2023) </p>
                         <p><img src="assets/diploma.png" class="profile-icon"> B.S. in Computer Science </p>
                         <p><img src="assets/location.png" class="profile-icon"> Queens, New York City, NY, USA</p>
-                        <p><img src="assets/phone.png" class="profile-icon"> (718) - 902 - 8538 </p>
+                        <p><img src="assets/email.png" class="profile-icon"> thomaskong101@gmail.com </p>
                     </div>
                 </div>
                 <div class="profile-links">
@@ -176,28 +176,30 @@
             </div>
         </div>
 
-        <h1 class="section-divider" id = "projects">Project & Resume</h1>
+        <h1 class="section-divider" id = "projects">Projects & Resume</h1>
         <div class="project-container" id = "project-container"> 
             <div class="folder-container">
-                <div class="folder" id="home-folder">
-                  <div class="top"></div>
-                  <div class="bottom">Project & Resume</div>
-                </div>
+                <a href="https://github.com/tk2558?tab=repositories" target = "_blank" class="folder-container" style="text-decoration:none">
+                    <div class="folder" id="home-folder">
+                        <div class="top"></div>
+                        <div class="bottom">GitHub-Projects</div>
+                    </div>
+                </a>
             </div>
             <svg height="100" width="40" xmlns="http://www.w3.org/2000/svg">
-                <polyline points="0,50 40,50" style="stroke:black;stroke-width:8px" id ="home-to-terminal"/>
+                <polyline points="0,50 40,50" class = "folderWires"/>
             </svg>
             <svg height="100" width="40" xmlns="http://www.w3.org/2000/svg">
-                <polyline points="0,50 40,50" style="stroke:black;stroke-width:8px" id ="home-to-terminal"/>
+                <polyline points="0,50 40,50" class = "folderWires"/>
             </svg>
             <svg height="100" width="40" xmlns="http://www.w3.org/2000/svg">
-                <polyline points="0,50 40,50" style="stroke:black;stroke-width:8px" id ="home-to-terminal"/>
+                <polyline points="0,50 40,50" class = "folderWires"/>
             </svg>
             <svg height="100" width="40" xmlns="http://www.w3.org/2000/svg">
-                <polyline points="0,50 40,50" style="stroke:black;stroke-width:8px" id ="home-to-terminal"/>
+                <polyline points="0,50 40,50" class = "folderWires"/>
             </svg>
             <svg height="100" width="40" xmlns="http://www.w3.org/2000/svg">
-                <polyline points="0,50 40,50" style="stroke:black;stroke-width:8px" id ="home-to-terminal"/>
+                <polyline points="0,50 40,50" class = "folderWires"/>
             </svg>
               
             <div class="terminal-container">    
@@ -214,7 +216,12 @@
                     <div class="terminal_promt">
                         <span class="terminal_user">tk2558@admin: </span>
                         <span class="terminal_location">~</span>
-                        <span class="terminal_bling">$</span>
+                        <span class="terminal_bling">$ cd GitHub-Projects</span>
+                    </div>
+                    <div class="terminal_promt">
+                        <span class="terminal_user">tk2558@admin: </span>
+                        <span class="terminal_location">~/GitHub-Projects</span>
+                        <span class="terminal_bling">$ cd </span>
                         <span class="terminal_cursor"></span>
                     </div>
                 </div>
@@ -222,46 +229,54 @@
         </div>
         <div class="wire-container" id = "wire-container">  
             <svg height="200" width="800" xmlns="http://www.w3.org/2000/svg">
-                <polyline points="65,0 65,100 65,200 65,100 300,100 300,200 300,100 535,100 535,200  535,100 750,100 750,195" style="fill:none; stroke:black;stroke-width:8px" id ="home-to-terminal"/>
+                <polyline points="65,0 65,100 65,200 65,100 300,100 300,200 300,100 535,100 535,200  535,100 750,100 750,200" 
+                class = "folderWires" id ="home-to-folders"/>
             </svg>
         </div>
 
         <div class="multiFolder-container" id = "multiFolder-container">         
             <div class="folder-container">
-                <div class="folder" id="folder1">
-                  <div class="top"></div>
-                  <div class="bottom">Project 1</div>
-                </div>
+                <a href="https://github.com/nickdellaquilo/NuTracker" target = "_blank" class="folder-container" style="text-decoration:none">
+                    <div class="folder" id="folder1">
+                        <div class="top"></div>
+                        <div class="bottom">NuTracker Project</div>
+                      </div>
+                </a>
             </div>
             <div class="folder-container">
-                <div class="folder" id="folder2">
-                    <div class="top"></div>
-                    <div class="bottom">Project 2</div>
-                  </div>
+                <a href="https://github.com/tk2558/Emotion-Image-Recongition-Machine-Learning-Project" target = "_blank" class="folder-container" style="text-decoration:none">
+                    <div class="folder" id="folder2">
+                        <div class="top"></div>
+                        <div class="bottom">Emotion Image Recongition Machine Learning Project</div>
+                      </div>
+                </a>
             </div>
             <div class="folder-container">
-                <div class="folder" id="folder3">
-                    <div class="top"></div>
-                    <div class="bottom">Project 3</div>
-                  </div>
+                <a target = "_blank" class="folder-container" style="text-decoration:none" id="randomFolder">
+                    <div class="folder" id="folder3">
+                        <div class="top"></div>
+                        <div class="bottom">Random GitHub Project</div>
+                    </div>
+                </a>
             </div>
-            <div class="pdf-icon">
+            <a href="assets\Thomas Kong Resume 2025.pdf" download="Thomas Kong Resume 2025.pdf" class="pdf-icon" >
                 <div class="corner"></div>
                 <div class="label">Resume.pdf</div>
                 <div class="line line1"></div>
                 <div class="line line2"></div>
                 <div class="line line3"></div>
                 <div class="line line4"></div>
-            </div>
+            </a>
         </div>
 
         <h1 class="section-divider" id = "contact">Contact Me</h1>  
         <div class="contact-container" id = "contact-container">  
-            <div class="train-container">
+            <div class="train-container" id ="train-container">
                 <div class="train-content">
                   <div class="track"></div>
                   <div class="train">
                     <div class="front"></div>
+                    <div class="chimney"></div>
                     <div class="wheels">
                       <div class="wheelOne"></div>
                       <div class="wheelTwo"></div>
@@ -271,12 +286,10 @@
                       <div class="wheelSix"></div>
                       <div class="bigWheel"></div>
                     </div>
-
                     <div class="cord"></div>
                     <div class="coach"></div>
                     <div class="coachTwo"></div>
                     <div class="windows"></div>
-                    
                   <div id="up1" class="steam1"></div>
                   <div id="up2" class="steam2"></div>
                   <div id="up3" class="steam3"></div>

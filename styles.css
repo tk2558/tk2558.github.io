@@ -550,15 +550,33 @@ nav ul li a {
   margin-top: 120px;
 }
 
-.project-container, .multiFolder-container {
+.project-container {
   display: flex; 
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  width: 90vw;
+  width: 50vw;
   margin-right: auto;
   margin-left: auto;
+}
+
+.multiFolder-container {
+  display: flex; 
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 50vw;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 5px;
+  background-color:#F3F3F3;
+  box-shadow: 0 0 0 6px black, 4px 4px 6px 4px rgba(0, 0, 0, 0.5);
+}
+
+.multiFolder-container-switch-mode {
+  box-shadow: 0 0 0 6px #85d6c9,  4px 4px 6px 4px rgba(0, 0, 0, 0.5);
 }
 
 .folder-container {
@@ -577,8 +595,12 @@ nav ul li a {
   margin-right: 10px;
 }
 
+#home-folder {
+  font-weight: bold;
+}
+
 .folder:hover {
-  transform: scale(1.05);
+  transform: scale(1.048);
 }
 
 .folder .top {
@@ -601,6 +623,8 @@ nav ul li a {
   top: -10px;
   text-align: center;
   align-content: center;
+  color: black;
+  font-weight: 600;
 }
 
 .terminal-container {
@@ -722,6 +746,17 @@ nav ul li a {
   margin-left: auto;
   margin-top: 0px;
   margin-bottom: 0px;
+  z-index: -1;
+}
+
+.folderWires {
+  fill:none; 
+  stroke:black; 
+  stroke-width:8px
+}
+
+.folderWires-switch-mode {
+  stroke:#85d6c9;
 }
 
 .pdf-icon {
@@ -732,6 +767,8 @@ nav ul li a {
   position: relative;
   margin: 10px;
   transition: transform 0.3s ease;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .pdf-icon:hover {
@@ -753,7 +790,7 @@ nav ul li a {
   width: 30px;
   height: 60px;
   border-radius: 0 60px 60px 0;
-  background:   #F3F3F3;; /* change color to match background*/
+  background: #F3F3F3; /* change color to match background*/
   position: absolute;
   transform-origin: top left;
   transform: rotate(-45deg);
@@ -830,6 +867,10 @@ nav ul li a {
   box-sizing: content-box;
 }
 
+.train-container-switch-mode {
+  transform:scaleX(-1);
+}
+
 .train-content {
   position: relative;
   width: 400px;
@@ -844,14 +885,14 @@ nav ul li a {
   position: absolute;
   width:400px;
   height:5px;
-  background-color: #db7;
+  background-color: #C4C4C4;
   top:150px;
   box-sizing: content-box;
 }
 
 .track:before {
   content:"";
-  --color: #C4C4C4;
+  --color: #846c46;
   position: absolute;
   width:10px;
   height:5px;
@@ -862,7 +903,6 @@ nav ul li a {
   220px 0 var(--color), 240px 0 var(--color), 260px 0 var(--color), 280px 0 var(--color), 300px 0 var(--color), 320px 0 var(--color), 340px 0 var(--color), 360px 0 var(--color), 
   380px 0 var(--color), 400px 0 var(--color), 420px 0 var(--color), 440px 0 var(--color), -100px 0 var(--color), -120px 0 var(--color), -140px 0 var(--color), 460px 0 var(--color),
    480px 0 var(--color);
-
   animation: move 1s linear infinite reverse;
   box-sizing: content-box;
 }
@@ -908,7 +948,7 @@ nav ul li a {
 .front {
   position: absolute;
   border: 5px solid #333;
-  background-color: #aed9e0;
+  background-color: #f3bc47;
   box-shadow: inset 2px -5px rgba(255,255,255,0.3);
   width:20px;
   height:30px;
@@ -942,6 +982,18 @@ nav ul li a {
   box-sizing: content-box;
 }
 
+.chimney {
+  content:"";
+  position: absolute;
+  width:24px;
+  height:12px;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 12px solid #333;
+  left:17px;
+  top:-43px;
+}
+
 .wheels {
   position: absolute;
   z-index:1;
@@ -955,7 +1007,7 @@ nav ul li a {
   width: 15px;
   height:15px;
   top:40px;
-  background-color: #e09f3e;
+  background-color: #97948c;
   box-shadow: inset 2px 2px white;
   z-index:2;
   box-sizing: content-box;
@@ -997,7 +1049,7 @@ nav ul li a {
   border-radius:50%;
   width:25px;
   height:25px;
-  background-color: #e09f3e;
+  background-color: #97948c;
   box-shadow: inset 2px 2px white;
   top:30px;
   left:-40px;
@@ -1076,7 +1128,7 @@ nav ul li a {
 .coachTwo {
   position: absolute;
   border:5px solid #333;
-  background-color: #aed9e0;
+  background-color: #f3bc47;
   box-shadow: inset 2px -5px rgba(255,255,255,0.3);
   width: 15px;
   height:25px;
@@ -1089,7 +1141,7 @@ nav ul li a {
   content:"";
   position: absolute;
   border:5px solid #333;
-  background-color: #aed9e0;
+  background-color: #f3bc47;
   box-shadow: inset 2px -5px rgba(255,255,255,0.3);
   width: 15px;
   height:25px;
@@ -1108,7 +1160,7 @@ nav ul li a {
 .windows {
   position: absolute;
   border:5px solid #333;
-  background-color: #aed9e0;
+  background-color: #f3bc47;
   box-shadow: inset 2px -5px rgba(255,255,255,0.3);
   width: 15px;
   height:25px;
@@ -1265,7 +1317,7 @@ nav ul li a {
 
 @keyframes scale {
   0% {transform: scaleY(1);}
-  50% {transform: scaleY(0.99);}
+  50% {transform: scaleY(0.98);}
   100% {transform: scaleY(1);}
 }
 
