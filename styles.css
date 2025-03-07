@@ -110,7 +110,7 @@ nav ul li a {
   flex-direction: row;
   align-items: flex-start;
   gap: 20px; /* Adjust spacing between profile and description */
-  min-width: 85vw;
+  max-width: 85vw;
   margin-left: 165px;
   margin-top: 75px;
   margin-bottom: 50px;
