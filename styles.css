@@ -111,7 +111,7 @@ nav ul li a {
   align-items: center;
   justify-content: center;
   gap: 1.25rem; /* Adjust spacing between profile and description */
-  max-width: 85vw;
+  max-width: 85%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 4.6875rem;
@@ -124,7 +124,8 @@ nav ul li a {
   flex-direction: column;
   gap: 10px;
   min-height: 27.8125em;
-  min-width: 42em;
+  width: 40%;
+  min-width: 616px;
   padding: 1.25em;
   border-radius: 10px;
   border: 2px dashed #DAA06D;
@@ -152,8 +153,8 @@ nav ul li a {
 }
 
 .profile-image {
-  width: 17.5em; 
-  height: 17.5em; 
+  min-width: 17.5em; 
+  min-height: 17.5em; 
   border: 4px solid #DAA06D;
   display:flex;
   justify-content: center;
@@ -267,7 +268,7 @@ nav ul li a {
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 54em;
+  width: 55%;
   height: 27.8125em;
   margin-left: .75em;
   background: #F3F3F3;
@@ -277,9 +278,8 @@ nav ul li a {
   overflow: hidden;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 1em;
-  overflow-y: scroll;
   --gradient: linear-gradient(to bottom, #2eadff, #3d83ff, #7e61ff);
-  --color: #32a6ff
+  --color: #32a6ff;
 }
 
 .description-switch-mode {
@@ -326,11 +326,12 @@ nav ul li a {
 
 .descript-body {
   color: #99999d;
-  padding: 0 1.25em;
+  margin-left: 1.25em;
   transition: transform 300ms ease;
   z-index: 5;
   font-size: 1.2rem;
   margin-bottom: .25em;
+  overflow-y: auto;
 }
 
 .description:hover .descript-body {
