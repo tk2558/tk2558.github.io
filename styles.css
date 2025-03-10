@@ -12,13 +12,15 @@ html, body {
 
 /* background */
 .back-container {
-    width: 100%;
-    min-height: 100%v;
+    width: 100vw;
+    min-width: 100%;
+    min-height: 100%;
     background-color: #F3F3F3;
     --color: #E1E1E1;
     background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
         linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
     background-size: 3.4375rem 3.4375rem;
+    overflow-x: auto;
 }
 
 /* Light/Dark Mode */
@@ -35,19 +37,25 @@ header {
     background: black;
     color: white;
     padding: 25px;
+    position: relative;
+    width: 100%;
+    min-width: 640px;
 }
 
 .name {
     font-size: 36px;
     font-weight: bold;
-    margin-left: 150px;
+    margin-left: 8%;
+    background: black;
 }
 
+nav {
+  margin-right: 8%;
+}
 nav ul {
     list-style: none;
     display: flex;
     gap: 25px;
-    margin-right: 150px;
 }
 
 nav ul li {
@@ -269,6 +277,7 @@ nav ul li a {
   flex-direction: column;
   position: relative;
   width: 55%;
+  min-width: 384px;
   height: 27.8125em;
   margin-left: .75em;
   background: #F3F3F3;
@@ -332,10 +341,6 @@ nav ul li a {
   font-size: 1.2rem;
   margin-bottom: .25em;
   overflow-y: auto;
-}
-
-.description:hover .descript-body {
-  transform: translateX(0.25em)
 }
 
 .descript-glow, .descript-borderglow {
@@ -408,7 +413,8 @@ nav ul li a {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  width: 90vw;
+  width: 90%;
+  min-width: 948px;
   margin-right: auto;
   margin-left: auto;
   margin-top: 75px;
@@ -418,7 +424,7 @@ nav ul li a {
 .skill-title {
   color: black;
   padding: 1rem;
-  width: 375px;
+  width: 22%;
   text-align: center;
   font-weight: 500;
   font-size: 2rem;
@@ -442,8 +448,9 @@ nav ul li a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  width: 90vw;
+  gap: 1%;
+  width: 90%;
+  min-width: 948px;
   margin-right: auto;
   margin-left: auto;
   margin-top: 50px;
@@ -452,16 +459,16 @@ nav ul li a {
 
 .circle-container {
   position: relative;
-  width: 600px;
-  height: 600px;
+  width: 35%;
+  aspect-ratio: 1 / 1; 
 }
 
 .center-circle {
   position: absolute;
   display: flex; 
   flex-direction: column;
-  width: 250px; 
-  height: 250px; 
+  width: 42%; 
+  height: 42%;
   background-color: white;
   border: 3px solid black;
   border-radius: 50%;
@@ -481,14 +488,14 @@ nav ul li a {
 }
 
 .center-circle img {
-  width: 120px;
-  height: 120px;
+  width: 45%;
+  height: 45%; 
 }
 
 .outer-circle {
   position: absolute;
-  width: 480px;
-  height: 480px;
+  width: 80%;
+  height: 80%;
   border: 2px dashed rgba(0, 0, 0, 0.5);
   border-radius: 50%;
   display: flex;
@@ -506,8 +513,8 @@ nav ul li a {
 
 .lang-circle, .FE-circle, .BE-circle {
   position: absolute;
-  width: 80px;
-  height: 80px;
+  width: 18%;
+  height: 18%;
   background-color: white;
   border: 1px solid black;
   border-radius: 50%;
@@ -530,8 +537,8 @@ nav ul li a {
 }
 
 .lang-circle img, .FE-circle img, .BE-circle img {
-  width: 48px;
-  height: 48px;
+  width: 60%;
+  height: 60%;
 }
 
 /* Positioning the 6 Circles Evenly Around the Outer Circle */
@@ -568,7 +575,8 @@ nav ul li a {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  width: 50vw;
+  width: 50%;
+  min-width: 785px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -579,7 +587,8 @@ nav ul li a {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  width: 1000px;
+  width: 50%;
+  min-width: 785px;
   margin-right: auto;
   margin-left: auto;
   border-radius: 5px;
@@ -596,6 +605,8 @@ nav ul li a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 21%;
+  height: 15%;
 }
 
 .folder {
@@ -640,13 +651,13 @@ nav ul li a {
 }
 
 .terminal-container {
-  min-width: 360px;
+  min-width: 37.5%;
   height: 240px;
 }
 
 .terminal_toolbar {
   display: flex;
-  height: 30px;
+  height: 8%;
   align-items: center;
   padding: 0 8px;
   box-sizing: border-box;
@@ -753,7 +764,8 @@ nav ul li a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 90vw;
+  width: 50%;
+  min-width: 785px;
   margin-right: auto;
   margin-left: auto;
   margin-top: 0px;

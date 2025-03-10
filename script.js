@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }); 
 });
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {   
     function startOrbiting(selector, radius, speed) {
         const circles = document.querySelectorAll(selector);
         const totalCircles = circles.length;
@@ -104,10 +104,31 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         animate();
     }
+    const outerCircle = document.getElementById('pl-outer-circle');
+    const diameter = outerCircle.getBoundingClientRect().height;
 
-    startOrbiting(".lang-circle", 240, .75); // (selector, radius, speed)
-    startOrbiting(".FE-circle", 240, .8);
-    startOrbiting(".BE-circle", 240, .75);
+    startOrbiting(".lang-circle", diameter/2, .75); // (selector, radius, speed)
+    startOrbiting(".FE-circle", diameter/2, .8);
+    startOrbiting(".BE-circle", diameter/2, .75);
+
+    function debounce(func, delay) {
+        let timeoutId;
+        return function(...args) {
+          clearTimeout(timeoutId);
+          timeoutId = setTimeout(() => {
+            func.apply(this, args);
+          }, delay);
+        };
+      }
+      
+      window.addEventListener('resize', debounce(function() {
+        const newOuterCircle = document.getElementById('pl-outer-circle');
+        const newDiameter = newOuterCircle.getBoundingClientRect().height;
+    
+        startOrbiting(".lang-circle", newDiameter/2, .75); // (selector, radius, speed)
+        startOrbiting(".FE-circle", newDiameter/2, .8);
+        startOrbiting(".BE-circle", newDiameter/2, .75);
+      }, 250));
 });
 
 // Random Folder Button
