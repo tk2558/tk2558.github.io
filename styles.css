@@ -240,6 +240,7 @@ nav ul li a {
   font-size: 1em;
   font-weight: 600;
   padding: 0.625em 1em;
+  border-radius: 6px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.2s ease-in-out;
   flex-basis: auto;
@@ -263,6 +264,7 @@ nav ul li a {
 
 .linkedin-btn:hover, .github-btn:hover, .google-btn:hover {
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
 }
 
 .linkedin-icon svg, .github-btn svg,  .google-btn svg    {
@@ -1240,19 +1242,19 @@ nav ul li a {
   flex-direction: column;
   gap: 10px;
   min-height: 27.8125em;
-  width: 60%;
+  width: 50%;
   min-width: 750px;
   padding: 1.25em;
   border-radius: 10px;
   margin-bottom: 2.5%;
   border: 2px dashed #efe7e7;
-  background-color: #fefefe;
-  box-shadow: 0 0 0 4px #fefefe, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+  background-color: #F3F3F3;
+  box-shadow: 0 0 0 4px #F3F3F3, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
 }
 
 .ticket {
   display: flex;
-  width: 70%;
+  width: 80%;
   min-width: 700px;
   min-height: 60%;
   border-radius: 15px;
@@ -1264,6 +1266,10 @@ nav ul li a {
   flex: 3;
   padding: 20px;
   background: #d3a95a;
+}
+
+.left-ticket-switch-mode {
+  background: #b1adc4;
 }
 
 .left-ticket h2 {
@@ -1278,8 +1284,12 @@ nav ul li a {
 form {
   display: flex;
   flex-direction: column;
-  border: 2px solid #ecc59a;
   border-radius: 5px;
+  border: 2px solid #ecc59a;
+}
+
+.form-border-switch {
+  border: 2px solid #92869a;
 }
 
 .ticket-border {
@@ -1296,12 +1306,12 @@ form {
 }
 
 input, textarea {
-  width: 80%;
+  width: 85%;
   padding: 10px;
   margin-bottom: 10px;
   border: none;
   border-radius: 5px;
-  background: #f8f8f8;
+  background: #eeeeee;
   margin-left: auto;
   margin-right: auto;
   resize: none;
@@ -1323,17 +1333,31 @@ textarea {
   position: relative;
 }
 
+.right-ticket-switch-mode  {
+  background: #535b56;
+}
+
 .ticket-icon {
   font-size: 24px;
-  color: white;
-  text-decoration: none;
-  background: black;
-  width: 28%;
+  background: white;
+  max-width: 28%;
   aspect-ratio: 1/1;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+}
+
+.ticket-icon img {
+  width: 105%;
+  height: 105%;
+  object-fit: fill;
+  align-items: center;
+  justify-content: center;
+}
+
+.ticket-icon:hover {
+  transform: scale(1.05);
 }
 
 .ticket-btn {
@@ -1355,7 +1379,7 @@ textarea {
   position: absolute;
   width: 3.5%;
   aspect-ratio: 1/1;
-  background-color: #fefefe;
+  background-color: #F3F3F3;
   border-radius: 50%;
   display: flex;
   justify-content: center;

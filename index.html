@@ -309,8 +309,8 @@
                     <div class = "ticket-hole"> </div>
                     <div class = "ticket-hole"> </div>
                     
-                    <div class="left-ticket">
-                        <form>
+                    <div class="left-ticket" id = "left-ticket">
+                        <form id = "ticket-form">
                           <h2>Have an inquiry? Send an Email...</h2>
                             <input type="text" placeholder="Name">
                             <input type="email" placeholder="Email">
@@ -318,11 +318,17 @@
                         </form>
                     </div>
                     
-                    <div class="right-ticket">
-                      <div class="ticket-border">
-                          <a href="#" class="ticket-icon"><i class="fab fa-linkedin"></i></a>
-                          <a href="#" class="ticket-icon"><i class="fab fa-github"></i></a>
-                          <a href="#" class="ticket-icon"><i class="fas fa-envelope"></i></a>
+                    <div class="right-ticket" id = "right-ticket">
+                      <div class="ticket-border" id = "ticket-border">
+                          <a href="https://www.linkedin.com/in/thomas-kong-1027a0262/" target = "_blank" class="ticket-icon">
+                            <img src="./assets/linkedin.png" alt="linkedinBtn">
+                          </a>
+                          <a href="https://github.com/tk2558" target = "_blank" class="ticket-icon">
+                            <img src="./assets/github.png" alt="githubBtn">
+                          </a>
+                          <a href="mailto: thomaskong101@gmail.com" target = "_blank" class="ticket-icon">
+                            <img src="./assets/gmail.png" alt="gmailBtn">
+                          </a>
                           <button class="ticket-btn">Send Message</button>
                       </div>
                     </div>

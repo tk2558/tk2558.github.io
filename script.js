@@ -20,6 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const multiFolderContainer = document.getElementById("multiFolder-container");
 
     const train = document.getElementById("train-container");
+    const ticketLeft = document.getElementById("left-ticket");
+    const ticketRight = document.getElementById("right-ticket");
+    const ticketForm = document.getElementById("ticket-form");
+    const ticketHoles = document.querySelectorAll(".ticket-hole");
 
     themeToggle.addEventListener("click", () => {
         iconSun.classList.toggle("active");
@@ -39,7 +43,11 @@ document.addEventListener("DOMContentLoaded", () => {
  
         folderWires.forEach(wire => { wire.classList.toggle("folderWires-switch-mode"); });
         multiFolderContainer.classList.toggle("multiFolder-container-switch-mode");
+
         train.classList.toggle("train-container-switch-mode");
+        ticketLeft.classList.toggle("left-ticket-switch-mode");
+        ticketRight.classList.toggle("right-ticket-switch-mode");
+        ticketForm.classList.toggle("form-border-switch");
     });
 });
 
