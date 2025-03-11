@@ -178,8 +178,23 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("ticket-btn").addEventListener("click", async function (event) {
         event.preventDefault(); // Prevent default form submission
         const form = document.getElementById("ticket-form");
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+  
+        // Validation: Check if fields are empty
+        if (!name || !email || !message) {
+            alert("Please fill out all fields before sending.");
+            return;
+        }
+        /*
+        if (email.toLowerCase() === "thomaskong101@gmail.com") {
+            alert("You cannot use your own email to send a message.");
+            return;
+        }
+        */
+
         const formData = new FormData(form);
-        console.log(formData);
         try {
             const response = await fetch("https://formsubmit.co/el/yacoba", {
                 method: "POST",
