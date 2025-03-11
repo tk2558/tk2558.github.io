@@ -25,6 +25,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const ticketForm = document.getElementById("ticket-form");
     const ticketHoles = document.querySelectorAll(".ticket-hole");
 
+    /*
+    ticketLeft.classList.toggle("left-ticket-switch-mode");
+    ticketRight.classList.toggle("right-ticket-switch-mode");
+    ticketForm.classList.toggle("form-border-switch");
+    */
+   
     themeToggle.addEventListener("click", () => {
         iconSun.classList.toggle("active");
         iconMoon.classList.toggle("active");
@@ -168,4 +174,27 @@ document.addEventListener("DOMContentLoaded", () => {
         const link = getRandomElement(githubLinks);
         randomFolder.setAttribute("href", link);
     });
+});
+
+document.getElementById("ticket-form").addEventListener("submit", async function (event) {
+    event.preventDefault(); // Prevent default form submission
+    const form = event.target;
+    const formData = new FormData(form);
+
+    try {
+        const response = await fetch("https://formsubmit.co/el/yacoba", {
+            method: "POST",
+            body: formData
+        });
+
+        if (response.ok) {
+            alert("Message sent successfully!");
+            form.reset();
+
+        } else {
+            alert("Failed to send message. Please try again.");
+        }
+    } catch (error) {
+        alert("An error occurred. Please try again later.");
+    }
 });

@@ -276,11 +276,10 @@ nav ul li a {
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 55%;
-  min-width: 384px;
+  width: 54.5%;
+  min-width: 24rem;
   height: 27.8125em;
   margin-left: .75em;
-  padding-right: 10px;
   background: #F3F3F3;
   border-radius: 10px;
   border: 1px solid #474747;
@@ -1249,9 +1248,9 @@ nav ul li a {
   padding: 1.25em;
   border-radius: 10px;
   margin-bottom: 2.5%;
-  border: 2px dashed #efe7e7;
-  background-color: #F3F3F3;
-  box-shadow: 0 0 0 4px #F3F3F3, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+  border: 2px dashed #99977b;
+  background-color: #353e5e;
+  box-shadow: 0 0 0 4px #353e5e, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
 }
 
 .ticket {
@@ -1348,6 +1347,7 @@ textarea {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  border: 4px solid #d3a95a;
 }
 
 .ticket-icon img {
@@ -1381,7 +1381,7 @@ textarea {
   position: absolute;
   width: 3.5%;
   aspect-ratio: 1/1;
-  background-color: #F3F3F3;
+  background-color: #353e5e;
   border-radius: 50%;
   display: flex;
   justify-content: center;
