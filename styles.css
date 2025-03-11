@@ -1235,7 +1235,6 @@ nav ul li a {
   justify-content: center;
   align-items: center;
   z-index: 2;
-  margin-top: -80px;
 }
 
 .contact {
@@ -1363,13 +1362,22 @@ textarea {
 }
 
 .ticket-btn {
-  background: #c89e4d;
+  background: #ecc59a;
   border: none;
+  width: 40%;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom: 2.5%;
   padding: 5px 15px;
   cursor: pointer;
   border-radius: 5px;
   font-weight: bold;
   transition: box-shadow 0.3s ease-in-out;
+}
+
+.ticket-btn-switch-mode {
+  background: #92869a; 
+  color: #eeee; 
 }
 
 .ticket-btn:hover {

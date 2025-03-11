@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const ticketLeft = document.getElementById("left-ticket");
     const ticketRight = document.getElementById("right-ticket");
     const ticketForm = document.getElementById("ticket-form");
+    const ticketBtn = document.getElementById("ticket-btn");
     const ticketHoles = document.querySelectorAll(".ticket-hole");
 
     /*
@@ -54,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ticketLeft.classList.toggle("left-ticket-switch-mode");
         ticketRight.classList.toggle("right-ticket-switch-mode");
         ticketForm.classList.toggle("form-border-switch");
+        ticketBtn.classList.toggle("ticket-btn-switch-mode");
     });
 });
 
@@ -175,7 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
         randomFolder.setAttribute("href", link);
     });
 
-    document.getElementById("ticket-btn").addEventListener("click", async function (event) {
+    document.getElementById("ticket-form").addEventListener("submit", async function (event) {
         event.preventDefault(); // Prevent default form submission
         const form = document.getElementById("ticket-form");
         const name = document.getElementById("name").value.trim();

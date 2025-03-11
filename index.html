@@ -310,12 +310,13 @@
                     <div class = "ticket-hole"> </div>
                     
                     <div class="left-ticket" id = "left-ticket">
-                        <form id = "ticket-form">
+                        <form id = "ticket-form" method="POST" action="https://formsubmit.co/el/yacoba">
                           <h2>Have an inquiry? Send an Email...</h2>
                             <input type="text" name="name" id="name" placeholder="Name" required>
                             <input type="email" name="email" id="email" placeholder="Email" required>
                             <textarea name="message" id="message" placeholder="Message" required></textarea>
                             <input type="text" name="_gotcha" style="display:none">
+                            <button class="ticket-btn" id ="ticket-btn">Send Message</button>
                         </form>
                     </div>
                     
@@ -330,7 +331,6 @@
                           <a href="mailto: thomaskong101@gmail.com" target = "_blank" class="ticket-icon">
                             <img src="./assets/gmail.png" alt="gmailBtn">
                           </a>
-                          <button class="ticket-btn" id ="ticket-btn">Send Message</button>
                       </div>
                     </div>
             </div>
