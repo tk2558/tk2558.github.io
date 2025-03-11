@@ -176,42 +176,4 @@ document.addEventListener("DOMContentLoaded", () => {
         const link = getRandomElement(githubLinks);
         randomFolder.setAttribute("href", link);
     });
-
-    document.getElementById("ticket-form").addEventListener("submit", async function (event) {
-        event.preventDefault(); // Prevent default form submission
-        const form = document.getElementById("ticket-form");
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const message = document.getElementById("message").value.trim();
-  
-        // Validation: Check if fields are empty
-        if (!name || !email || !message) {
-            alert("Please fill out all fields before sending.");
-            return;
-        }
-        /*
-        if (email.toLowerCase() === "thomaskong101@gmail.com") {
-            alert("You cannot use your own email to send a message.");
-            return;
-        }
-        */
-
-        const formData = new FormData(form);
-        try {
-            const response = await fetch("https://formsubmit.co/el/yacoba", {
-                method: "POST",
-                body: formData
-            });
-    
-            if (response.ok) {
-                alert("Message sent successfully!");
-                form.reset();
-    
-            } else {
-                alert("Failed to send message. Please try again.");
-            }
-        } catch (error) {
-            alert("An error occurred. Please try again later.");
-        }
-    });
 });
