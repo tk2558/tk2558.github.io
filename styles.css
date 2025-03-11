@@ -339,7 +339,7 @@ nav ul li a {
   transition: transform 300ms ease;
   z-index: 5;
   font-size: 1.2rem;
-  width: 95%;
+  width: 90%;
   margin-bottom: .25em;
   overflow-y: auto;
 }
@@ -589,7 +589,7 @@ nav ul li a {
   align-items: center;
   gap: 20px;
   width: 50%;
-  min-width: 785px;
+  min-width: 950px;
   margin-right: auto;
   margin-left: auto;
   border-radius: 5px;
