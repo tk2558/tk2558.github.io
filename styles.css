@@ -280,6 +280,7 @@ nav ul li a {
   min-width: 384px;
   height: 27.8125em;
   margin-left: .75em;
+  padding-right: 10px;
   background: #F3F3F3;
   border-radius: 10px;
   border: 1px solid #474747;
@@ -339,8 +340,9 @@ nav ul li a {
   transition: transform 300ms ease;
   z-index: 5;
   font-size: 1.2rem;
-  width: 90%;
+  width: 95%;
   margin-bottom: .25em;
+  padding-right: 2.5%;
   overflow-y: auto;
 }
 
