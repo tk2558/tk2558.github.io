@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 250));
 });
 
-// Random Folder Button
+// Document Buttons
 document.addEventListener("DOMContentLoaded", () => {
     function getRandomElement(array) {
         const randomIndex = Math.floor(Math.random() * array.length);
@@ -174,27 +174,27 @@ document.addEventListener("DOMContentLoaded", () => {
         const link = getRandomElement(githubLinks);
         randomFolder.setAttribute("href", link);
     });
-});
 
-document.getElementById("ticket-form").addEventListener("submit", async function (event) {
-    event.preventDefault(); // Prevent default form submission
-    const form = event.target;
-    const formData = new FormData(form);
-
-    try {
-        const response = await fetch("https://formsubmit.co/el/yacoba", {
-            method: "POST",
-            body: formData
-        });
-
-        if (response.ok) {
-            alert("Message sent successfully!");
-            form.reset();
-
-        } else {
-            alert("Failed to send message. Please try again.");
+    document.getElementById("ticket-btn").addEventListener("click", async function (event) {
+        event.preventDefault(); // Prevent default form submission
+        const form = document.getElementById("ticket-form");
+        const formData = new FormData(form);
+        console.log(formData);
+        try {
+            const response = await fetch("https://formsubmit.co/el/yacoba", {
+                method: "POST",
+                body: formData
+            });
+    
+            if (response.ok) {
+                alert("Message sent successfully!");
+                form.reset();
+    
+            } else {
+                alert("Failed to send message. Please try again.");
+            }
+        } catch (error) {
+            alert("An error occurred. Please try again later.");
         }
-    } catch (error) {
-        alert("An error occurred. Please try again later.");
-    }
+    });
 });
