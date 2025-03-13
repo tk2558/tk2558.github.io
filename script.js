@@ -176,4 +176,13 @@ document.addEventListener("DOMContentLoaded", () => {
         const link = getRandomElement(githubLinks);
         randomFolder.setAttribute("href", link);
     });
+
+    // ANIMATION
+    const flower = document.getElementById("flower");
+    flower.addEventListener("click", function () { 
+        flower.classList.add("flower-spin"); // Trigger the flower image SPIN MOVE
+        setTimeout(() => {
+            flower.classList.remove("flower-spin"); // Remove class after animation completes to allow re-triggering
+        }, 1000); // Same duration as animation
+    });
 });

@@ -1371,6 +1371,10 @@ textarea {
   box-shadow: #daf0dd 0 0 8px 0, var(--color1) -8px -8px 0 3px, var(--color2) 8px -8px 0 3px, var(--color1) 8px 8px 0 3px, var(--color2) -8px 8px 0 3px;
 }
 
+.flower-spin {
+    animation: spin360 1s ease-in-out;
+}
+
 .ticket-icon:hover {
   transform: scale(1.05);
 }
@@ -1532,5 +1536,14 @@ textarea {
   100%{
     transform: translateY(-110px) translateX(-80px) scale(1.5);
     opacity: 0.2;
+  }
+}
+
+@keyframes spin360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
