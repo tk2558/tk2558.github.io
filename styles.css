@@ -121,8 +121,7 @@ header {
   margin-right: 5px;
 }
 
-
-
+/*
 .hidden-menu {
   display: none;
   background-color: #474747;
@@ -135,7 +134,7 @@ header {
 
 @media (min-width: 1025px) {
   .hidden-menu {
-      display: none !important; /* Force hide when screen expands past 905px */
+      display: none !important;
   }
 }
 
@@ -160,6 +159,46 @@ header {
   color: #f9fafb;
   text-decoration: none;
   font-size: 2rem;
+}
+*/
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 6;
+  top: 0;
+  right: 0;
+  background-color: #474747;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
 
 .about {
@@ -191,8 +230,7 @@ header {
   flex-direction: column;
   gap: 10px;
   min-height: 27.8125em;
-  width: 40%;
-  min-width: 616px;
+  width: fit-content;
   padding: 1.25em;
   border-radius: 10px;
   border: 2px dashed #DAA06D;
@@ -446,8 +484,6 @@ header {
   width: 75%;
 }
 
-
-
 .section-divider {
   --b: 6px;   /* control the border thickness */
   --w: 45vw;  /* control the width of the line*/
@@ -477,23 +513,15 @@ header {
 
 .title-container {
   display: flex; 
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  width: 90%;
-  min-width: 948px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 75px;
-  margin-bottom: 10px;
+  flex-direction: column;
+  width: 33%;
 }
 
 .skill-title {
   color: black;
   padding: 1rem;
-  width: 22%;
   text-align: center;
+  width: 75%;
   font-weight: 500;
   font-size: 2rem;
   border-radius: 5px;
@@ -502,6 +530,7 @@ header {
   box-shadow: 0 0 0 4px #f8db91, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 40px;
 }
 
 .skill-title-switch-mode {
@@ -514,11 +543,10 @@ header {
 .skill-container {
   display: flex; 
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 1%;
   width: 90%;
-  min-width: 948px;
   margin-right: auto;
   margin-left: auto;
   margin-top: 50px;
@@ -527,7 +555,7 @@ header {
 
 .circle-container {
   position: relative;
-  width: 33%;
+  width: 100%;
   aspect-ratio: 1 / 1; 
 }
 
@@ -670,6 +698,19 @@ header {
   .profile-img {
     height: 17.5px;
     width: 17.5px;
+  }
+
+}
+
+@media (max-width: 945px) {
+  .skill-container {
+    flex-direction: column;
+  }
+  .title-container {
+    width: 80%;
+  }
+  #FE-Title, #BE-Title {
+    margin-top: 40px;
   }
 }
 

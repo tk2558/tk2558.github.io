@@ -39,15 +39,12 @@
             </nav>
         </header>
 
-        <section class="hidden-menu" id = "hidden-menu">
-            <nav class = "hidden-nav">
-                <ul class = "hidden-ul">
-                    <li class = "hidden-li"><a href="#about">About</a></li>
-                    <li class = "hidden-li"><a href="#skills">Skills</a></li>
-                    <li class = "hidden-li"><a href="#projects">Projects & Resume</a></li>
-                    <li class = "hidden-li"><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+        <section id="Sidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </section>
     
         <section class = "about" id="about">
@@ -110,85 +107,90 @@
         </section>
 
         <h1 class="section-divider" id = "skills">My Skills</h1>
-        <div class="title-container" id = "title-container">
-            <div class="skill-title">Programming Languages</div>
-            <div class="skill-title">Front-End</div>
-            <div class="skill-title">Back-End & Databases</div>
-        </div>
-        <div class="skill-container" id = "skill-container">
-            <div class = "circle-container">
-                <div class="outer-circle" id = "pl-outer-circle">
-                    <div class="center-circle" id="pl-center-circle" data-orbit="true">
-                        <img id ="pl-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"/>
-                        <span id ="pl-name">Python</span>
-                    </div>
-                    <div class="lang-circle" data-lang="Python">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"/>
-                    </div>
-                    <div class="lang-circle" data-lang="C++">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"/>
-                    </div>
-                    <div class="lang-circle" data-lang="Kotlin">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg"/>
-                    </div>
-                    <div class="lang-circle" data-lang="Java">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"/>
-                    </div>
-                    <div class="lang-circle" data-lang="JavaScript">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"/>
-                    </div>
-                    <div class="lang-circle" data-lang="C">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"/>
+        <section class="skill-container" id = "skill-container">
+            <div class = "title-container" id = PL-Title>
+                <div class="skill-title">Programming Languages</div>
+                <div class = "circle-container">
+                    <div class="outer-circle" id = "pl-outer-circle">
+                        <div class="center-circle" id="pl-center-circle" data-orbit="true">
+                            <img id ="pl-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"/>
+                            <span id ="pl-name">Python</span>
+                        </div>
+                        <div class="lang-circle" data-lang="Python">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"/>
+                        </div>
+                        <div class="lang-circle" data-lang="C++">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"/>
+                        </div>
+                        <div class="lang-circle" data-lang="Kotlin">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg"/>
+                        </div>
+                        <div class="lang-circle" data-lang="Java">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"/>
+                        </div>
+                        <div class="lang-circle" data-lang="JavaScript">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"/>
+                        </div>
+                        <div class="lang-circle" data-lang="C">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"/>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class = "circle-container">
-                <div class="outer-circle" id = "FE-outer-circle">
-                    <div class="center-circle" id="FE-center-circle" data-orbit="true">
-                        <img id = "FE-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"/>
-                        <span id ="FE-name">HTML</span>
-                    </div>
-                    <div class="FE-circle" data-lang="HTML">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
-                    </div>
-                    <div class="FE-circle" data-lang="CSS">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
-                    </div>
-                    <div class="FE-circle" data-lang="XML">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/xml/xml-original.svg"/>
-                    </div>
-                    <div class="FE-circle" data-lang="React">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
-                    </div>
-                </div>
-            </div>
-            <div class = "circle-container">
-                <div class="outer-circle" id = "BE-outer-circle">
-                    <div class="center-circle" id="BE-center-circle" data-orbit="true">
-                        <img id = "BE-img"  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="py"/>
-                        <span id ="BE-name">NodeJS</span>
-                    </div>
-                    <div class="BE-circle" data-lang="NodeJS">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" />
-                    </div>
-                    <div class="BE-circle" data-lang="Flask">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" />
-                    </div>
-                    <div class="BE-circle" data-lang="SQL">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" />
-                    </div>
-                    <div class="BE-circle" data-lang="MongoDB">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" />
-                    </div>
-                    <div class="BE-circle" data-lang="PostgrsSQL">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" />
-                    </div>
-                    <div class="BE-circle" data-lang="FastAPI">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" />
+            <div class = "title-container" id = FE-Title>
+                <div class="skill-title">Front-End</div>
+                <div class = "circle-container">
+                    <div class="outer-circle" id = "FE-outer-circle">
+                        <div class="center-circle" id="FE-center-circle" data-orbit="true">
+                            <img id = "FE-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"/>
+                            <span id ="FE-name">HTML</span>
+                        </div>
+                        <div class="FE-circle" data-lang="HTML">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                        </div>
+                        <div class="FE-circle" data-lang="CSS">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
+                        </div>
+                        <div class="FE-circle" data-lang="XML">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/xml/xml-original.svg"/>
+                        </div>
+                        <div class="FE-circle" data-lang="React">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+
+            <div class = "title-container" id = BE-Title>
+                <div class="skill-title">Back-End & Databases</div>
+                <div class = "circle-container">
+                    <div class="outer-circle" id = "BE-outer-circle">
+                        <div class="center-circle" id="BE-center-circle" data-orbit="true">
+                            <img id = "BE-img"  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="py"/>
+                            <span id ="BE-name">NodeJS</span>
+                        </div>
+                        <div class="BE-circle" data-lang="NodeJS">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" />
+                        </div>
+                        <div class="BE-circle" data-lang="Flask">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" />
+                        </div>
+                        <div class="BE-circle" data-lang="SQL">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" />
+                        </div>
+                        <div class="BE-circle" data-lang="MongoDB">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" />
+                        </div>
+                        <div class="BE-circle" data-lang="PostgrsSQL">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" />
+                        </div>
+                        <div class="BE-circle" data-lang="FastAPI">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <h1 class="section-divider" id = "projects">Projects & Resume</h1>
         <div class="project-container" id = "project-container"> 
@@ -358,15 +360,19 @@
 </body>
 </html>
 <script>
+function openNav() {
+  document.getElementById("Sidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("Sidenav").style.width = "0";
+}
+
 document.addEventListener("DOMContentLoaded", function () {
-const hamburger = document.getElementById("interface-menu");
-hamburger.addEventListener("click", function () {
-    const hiddenMenu = document.getElementById("hidden-menu");
-    if (hiddenMenu.style.display === "none" || hiddenMenu.style.display === "") {
-        hiddenMenu.style.display = "flex";
-    } else {
-        hiddenMenu.style.display = "none";
-    }
+    const hamburger = document.getElementById("interface-menu");
+    hamburger.addEventListener("click", function () {
+        openNav();
     });
 });
+
 </script>
