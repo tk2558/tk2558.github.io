@@ -171,6 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "https://github.com/tk2558/Python-Snake-Game",
             "https://github.com/tk2558/Coin-Detection/tree/main",
             "https://github.com/tk2558/Fish-Tracking/tree/main",
+            "https://github.com/tk2558/wordle-spellwars",
             "https://github.com/tk2558/tk2558.github.io/tree/main"
         ]
         const link = getRandomElement(githubLinks);
